@@ -22,20 +22,20 @@ If you try to simply run `make M=arch/x86/kvm` on a downloaded kernel source, yo
 
 Boot into the kernel you want to develop on, clone this repository, and run the setup script:
 
-\`\`\`bash
+```bash
 chmod +x hypervisor-setup/setup-kvm-dev.sh
 ./setup-kvm-dev.sh
-\`\`\`
+```
 This will download the exact kernel source matching your `uname -r`, apply all path fixes, and verify the build. 
 
 Once setup is complete, navigate to your new source tree (e.g., `~/kvm-dev-env/kvm-src-7.0.0-28-generic`). 
 
 Make your modifications to `arch/x86/kvm/svm/svm.c`, `svm.h`, etc., and use the rebuild script to instantly compile and insert your changes into the running kernel:
 
-\`\`\`bash
+```bash
 chmod +x hypervisor-setup/rebuild.sh
 ./hypervisor-setup/rebuild.sh
-\`\`\`
+```
 
 ## Part 2: Guest (CVM)
 ```bash
